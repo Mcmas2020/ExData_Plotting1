@@ -16,6 +16,4 @@ lines(data2$datetime, data2$Sub_metering_3,type= "l", col = "blue") ## Add third
 ## Place a legend in the top right corner 
 legend("topright", lwd = 2, col = c("black", "red", "blue"), legend = c("Sub metering 1", "Sub metering 2", "Sub metering 3") )
 
-## Create png file
-png(filename = "plot_3.png", width = 480, height = 480)
-dev.off()
+## Export to png via export in plot view

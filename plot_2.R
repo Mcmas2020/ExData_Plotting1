@@ -8,9 +8,9 @@ data2$Date <- as.Date(data2$Date, format="%d/%m/%Y") ## format the date to day/m
 datetime <- paste(as.Date(data2$Date), data2$Time) ## create a variable with date and time 
 data2$datetime <- as.POSIXct(datetime) ## convert character string to data format. 
 
+
 ## Plot global active power data for all times in the two days
 plot(data2$datetime, data2$Global_Active_Power,type="l", ylab="Global Active Power (kilowatts)", xlab = " ")
 
-## Create png file
-png(filename = "plot_2.png", width = 480, height = 480)
-dev.off()
+## Export to png via export in plot view
+

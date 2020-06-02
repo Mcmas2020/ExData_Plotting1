@@ -6,6 +6,4 @@ data2 <- subset(data, data$Date == "1/2/2007" | data$Date == "2/2/2007") ## Crea
 ## Create a histogram of global active power by converting the string into a numeric. Label the title and x axis
 hist(as.numeric(data2$Global_Active_Power), main = "Global Active Power", xlab = "Global Active Power (Kilowatts)", col = "red")
 
-## Create png file
-png(filename = "plot_1.png", width = 480, height = 480)
-dev.off()
+## Export to png via export in plot view

@@ -8,9 +8,10 @@ data2$Date <- as.Date(data2$Date, format="%d/%m/%Y")
 datetime <- paste(as.Date(data2$Date), data2$Time)
 data2$datetime <- as.POSIXct(datetime)
 
+
 ## Plot data
 par(mfcol=c(2,2), mar = c(4,4,2,1)) ##make 4 graphs filling the first column first. Change the bottom margin by 1 to fit the legend in without masking the data
-   
+
 plot(data2$datetime, data2$Global_Active_Power,type="l", ylab="Global Active Power (kilowatts)", xlab = " ")   ##1st graph
     
 plot(data2$datetime, data2$Sub_metering_1,type= "l", xlab = " ", ylab="Energy Sub metering") ##Second graph including additional datasets and legend
@@ -22,6 +23,4 @@ plot(data2$datetime, data2$Voltage,type="l", ylab="Voltage", xlab = "datetime") 
 
 plot(data2$datetime, data2$Global_Reactive_Power,type="l", ylab="Greater Reactive Power (Kilowatts)", xlab = "datetime") ##Add fourth plot greater reactive power over time
 
-## Create png file
-png(filename = "plot_4.png", width = 480, height = 480)
-dev.off()
+## Export to png via export in plot view
